@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Communication">
+      <UniqueIdentifier>{65afd367-7c3f-4693-a7e2-4ab83d132bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Define">
+      <UniqueIdentifier>{cf362818-043c-45f5-84e5-3f47d81be686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hide">
+      <UniqueIdentifier>{be97aca9-3f04-42b3-ad81-033615e5ac7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Library">
+      <UniqueIdentifier>{7ce15aa6-6a7d-4685-bbb7-27530c042e51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{cfec274e-6d97-439c-8548-8114c354f460}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="Driver.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\MemoryUtils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Hide\Hide.cpp">
+      <Filter>Source Files\Hide</Filter>
+    </ClCompile>
+    <ClCompile Include="Communication\Communication.cpp">
+      <Filter>Source Files\Communication</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="API.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\MemoryUtils.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\skCrypter.h">
+      <Filter>Source Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Hide\Hide.h">
+      <Filter>Source Files\Hide</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\CRT.h">
+      <Filter>Source Files\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\IA32.h">
+      <Filter>Source Files\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\NT.h">
+      <Filter>Source Files\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\Patterns.h">
+      <Filter>Source Files\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Communication\Communication.h">
+      <Filter>Source Files\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="Communication\CommunicationType.h">
+      <Filter>Source Files\Communication</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
