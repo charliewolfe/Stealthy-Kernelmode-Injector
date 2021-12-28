@@ -332,6 +332,7 @@ API::AllocateVad(
 		MiAllocateVad = (PMMVAD_SHORT(*)(UINT_PTR, UINT_PTR, LOGICAL))MemoryUtils::FindPatternImage((PCHAR)MemoryUtils::GetKernelBase(), MI_ALLOCATE_VAD_PATTERN, MI_ALLOCATE_VAD_MASK);
 		if (!MiAllocateVad) {
 			DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, "MiAllocateVad not found");
+			return STATUS_UNSUCCESSFUL;
 		}
 	}
 
@@ -339,6 +340,7 @@ API::AllocateVad(
 		MiInsertVadCharges = (NTSTATUS(*)(PMMVAD_SHORT, PEPROCESS))MemoryUtils::FindPatternImage((PCHAR)MemoryUtils::GetKernelBase(), MI_INSERT_VAD_CHANGES_PATTERN, MI_INSERT_VAD_CHANGES_MASK);
 		if (!MiInsertVadCharges) {
 			DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, "MiInsertVadCharges not found");
+			return STATUS_UNSUCCESSFUL;
 		}
 	}
 
@@ -346,6 +348,7 @@ API::AllocateVad(
 		MiInsertVad = (VOID(*)(PMMVAD_SHORT, PEPROCESS))MemoryUtils::FindPatternImage((PCHAR)MemoryUtils::GetKernelBase(), MI_INSERT_VAD_PATTERN, MI_INSERT_VAD_MASK);
 		if (!MiInsertVad) {
 			DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, "MiInsertVad not found");
+			return STATUS_UNSUCCESSFUL;
 		}
 	}
 
